@@ -11,16 +11,13 @@ class HomeScreen extends StatelessWidget {
     Provider.of<FoodController>(context, listen: false).getFoodDetails();
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 70,
         actions: [
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.search,
-                size: 40,
-              )),
-          const SizedBox(
-            width: 25,
-          )
+          SizedBox(
+            height: 40,
+            width: 250,
+            child: searchBar(context)
+          ),
         ],
       ),
       body: SafeArea(
